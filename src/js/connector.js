@@ -5,7 +5,7 @@ window.TrelloPowerUp.initialize({
 		// return an array of card badges
 		return t.card('all')
 		.then(function(card){
-			consle.log(card);
+			console.log(card);
 			return [{
 				text: card.idShort
 			}];
