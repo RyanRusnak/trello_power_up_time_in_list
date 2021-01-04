@@ -1,0 +1,7 @@
+node_modules
+
+# parcelJS cache folder
+.cache/
+
+# parcelJS build folder
+dist/

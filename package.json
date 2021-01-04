@@ -1,0 +1,16 @@
+{
+  "name": "trello_power_up_demo",
+  "version": "1.0.0",
+  "description": "trello power up tutorial",
+  "main": "index.js",
+  "repository": "git@github.com:RyanRusnak/trello_power_up_demo.git",
+  "author": "ryanrusnak",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "parcel build src/html/*.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
