@@ -7,7 +7,7 @@ window.TrelloPowerUp.initialize({
 		.then(function(card){
 			console.log(card);
 			// request array of card activity
-			fetch('https://api.trello.com/1/members/me/boards?key=%%TRELLO_KEY%%&token=%%TRELLO_TOKEN%%')
+			fetch(`https://api.trello.com/1/cards/${card.id}/actions?key=%%TRELLO_KEY%%&token=%%TRELLO_TOKEN%%`)
 			.then(response => response.json())
 			.then(data => console.log(data));
 			// find most recent date card entered column
