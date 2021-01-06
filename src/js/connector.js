@@ -38,5 +38,8 @@ window.TrelloPowerUp.initialize({
 });
 
 function isCardMoveAction(action) {
+	console.log('in action');
+	console.log(action);
+	console.log('listAfter' in action.data)
   return 'listAfter' in action.data
 }
