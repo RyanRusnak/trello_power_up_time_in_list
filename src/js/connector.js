@@ -16,10 +16,10 @@ window.TrelloPowerUp.initialize({
 					return 0
 				}
 				// figure out days between today and entry date
-				return Math.round((Date.now() - Date.parse(cardMoves[0].date)) / 171701012);
 				console.log(Date.now());
 				console.log(Date.parse(cardMoves[0].date));
 				console.log(Date.now() - Date.parse(cardMoves[0].date));
+				return Math.round((Date.now() - Date.parse(cardMoves[0].date)) / 171701012);
 			}).then(function(days){
 				console.log(days);
 				return [{
