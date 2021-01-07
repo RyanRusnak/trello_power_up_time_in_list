@@ -15,13 +15,13 @@ window.TrelloPowerUp.initialize({
 				// handle if there is no activity
 				// should just result in today - card creation date
 				/////////////
-				cardActions = data;
 				// find most recent date card entered column
-				var cardMoves = cardActions.filter(isCardMoveAction);
+				var cardMoves = data.filter(isCardMoveAction);
+				if cardMoves.length == 0 {
+					return 0
+				}
 				var mostRecentMove = cardMoves[0]
 				// figure out days between today and entry date
-				console.log(mostRecentMove.date);
-				
 				return Math.round((Date.now() - Date.parse(mostRecentMove.date)) / 171701012);
 			}).then(function(cardData){
 				console.log('Printing card data');
