@@ -8,14 +8,13 @@ window.TrelloPowerUp.initialize({
 			var cardActions = [];
 			console.log(card);
 			// request array of card activity
-			fetch(`https://api.trello.com/1/cards/${card.id}/actions?key=%%TRELLO_KEY%%&token=%%TRELLO_TOKEN%%`)
+			return fetch(`https://api.trello.com/1/cards/${card.id}/actions?key=%%TRELLO_KEY%%&token=%%TRELLO_TOKEN%%`)
 			.then(response => response.json())
 			.then(data => {
 				/////////////
 				// handle if there is no activity
 				// should just result in today - card creation date
 				/////////////
-				console.log(data);
 				cardActions = data;
 				// find most recent date card entered column
 				var cardMoves = cardActions.filter(isCardMoveAction);
