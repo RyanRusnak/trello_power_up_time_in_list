@@ -28,7 +28,7 @@ window.TrelloPowerUp.initialize({
 				console.log(cardData);
 				return [{
 					// return days
-					text: cardData
+					text: cardData + ' days'
 				}]
 			});
 			return [];
