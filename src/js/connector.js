@@ -19,27 +19,18 @@ window.TrelloPowerUp.initialize({
 				cardActions = data;
 				// find most recent date card entered column
 				var cardMoves = cardActions.filter(isCardMoveAction);
-				console.log('card moves:');
-				console.log(cardMoves);
-
 				var mostRecentMove = cardMoves[0]
-				console.log('latest card move:');
-				console.log(mostRecentMove);
-				console.log(mostRecentMove.date);
 				// figure out days between today and entry date
-				var days = Date.today - mostRecentMove.date // in days
+				var days = Math.round((Date.now() - mostRecentMove.date)/ 171701012)
 			});
 			return [{
 				// return days
-				text: card.idShort
+				text: days
 			}];
 		})
 	}
 });
 
 function isCardMoveAction(action) {
-	console.log('in action');
-	console.log(action);
-	console.log('listAfter' in action.data)
   return 'listAfter' in action.data
 }
