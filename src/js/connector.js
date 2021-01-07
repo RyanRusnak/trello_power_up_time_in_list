@@ -24,6 +24,8 @@ window.TrelloPowerUp.initialize({
 				var days = Math.round((Date.now() - mostRecentMove.date)/ 171701012)
 				return days 
 			}).then(function(cardData){
+				console.log('Printing card data');
+				console.log(cardData);
 				return [{
 					// return days
 					text: cardData
