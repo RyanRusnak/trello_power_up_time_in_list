@@ -13,15 +13,11 @@ window.TrelloPowerUp.initialize({
 				var cardMoves = data.filter(isCardMoveAction);
 				// put 0 days if there is no activity history
 				if (cardMoves.length == 0) {
-					return Math.round((Date.now() - Date.parse(card.date)) / (1000 * 60 * 60 * 24))
+					return Math.round((Date.now() - Date.parse(card.dateLastActivity)) / (1000 * 60 * 60 * 24))
 				}
 				// figure out days between today and entry date
-				console.log(Date.now());
-				console.log(Date.parse(cardMoves[0].date));
-				console.log(Date.now() - Date.parse(cardMoves[0].date));
 				return Math.round((Date.now() - Date.parse(cardMoves[0].date)) / (1000 * 60 * 60 * 24));
 			}).then(function(days){
-				console.log(days);
 				return [{
 					// return days
 					text: pluralize(days)
