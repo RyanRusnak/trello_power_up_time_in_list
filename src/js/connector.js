@@ -12,7 +12,7 @@ window.TrelloPowerUp.initialize({
 			.then(data => {
 				var cardMoves = data.filter(isCardMoveAction);
 				// put 0 days if there is no activity history
-				if (cardMoves.length) == 0 {
+				if (cardMoves.length == 0) {
 					return 0
 				}
 				// figure out days between today and entry date
