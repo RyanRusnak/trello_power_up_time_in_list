@@ -21,7 +21,7 @@ window.TrelloPowerUp.initialize({
 				console.log(days);
 				return [{
 					// return days
-					text: days + ' days'
+					text: pluralize(days)
 				}]
 			});
 			return [];
@@ -31,4 +31,12 @@ window.TrelloPowerUp.initialize({
 
 function isCardMoveAction(action) {
   return 'listAfter' in action.data
+}
+
+function pluralize(num){
+	if (num == 1){
+		return num + ' day'
+	}else{
+		return num + ' days'
+	}
 }
