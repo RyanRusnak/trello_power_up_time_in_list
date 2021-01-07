@@ -19,7 +19,7 @@ window.TrelloPowerUp.initialize({
 				console.log(Date.now());
 				console.log(Date.parse(cardMoves[0].date));
 				console.log(Date.now() - Date.parse(cardMoves[0].date));
-				return Math.round((Date.now() - Date.parse(cardMoves[0].date)) / 171701012);
+				return Math.round((Date.now() - Date.parse(cardMoves[0].date)) / (1000 * 60 * 60 * 24));
 			}).then(function(days){
 				console.log(days);
 				return [{
