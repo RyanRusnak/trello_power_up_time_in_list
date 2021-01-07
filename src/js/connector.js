@@ -34,7 +34,10 @@ function isCardMoveAction(action) {
 }
 
 function pluralize(num){
-	if (num == 1){
+	if (num == 0){
+		return '< 1 day'
+	}
+	else if (num == 1){
 		return num + ' day'
 	}else{
 		return num + ' days'
