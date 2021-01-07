@@ -10,10 +10,11 @@ window.TrelloPowerUp.initialize({
 			return fetch(`https://api.trello.com/1/cards/${card.id}/actions?key=%%TRELLO_KEY%%&token=%%TRELLO_TOKEN%%`)
 			.then(response => response.json())
 			.then(data => {
+				console.log(data);
 				var cardMoves = data.filter(isCardMoveAction);
 				// put 0 days if there is no activity history
 				if (cardMoves.length == 0) {
-					return 0
+					return Math.round((Date.now() - Date.parse(data.date)) / (1000 * 60 * 60 * 24))
 				}
 				// figure out days between today and entry date
 				console.log(Date.now());
