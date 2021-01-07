@@ -17,7 +17,7 @@ window.TrelloPowerUp.initialize({
 				/////////////
 				// find most recent date card entered column
 				var cardMoves = data.filter(isCardMoveAction);
-				if cardMoves.length == 0 {
+				if (cardMoves.length) == 0 {
 					return 0
 				}
 				var mostRecentMove = cardMoves[0]
