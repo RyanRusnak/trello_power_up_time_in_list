@@ -22,6 +22,7 @@ window.TrelloPowerUp.initialize({
 				var mostRecentMove = cardMoves[0]
 				// figure out days between today and entry date
 				var days = Math.round((Date.now() - mostRecentMove.date)/ 171701012)
+				console.log(days)
 			});
 			return [{
 				// return days
